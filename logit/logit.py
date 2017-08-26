@@ -11,6 +11,7 @@ X_train_raw, X_test_raw, y_train, y_test = train_test_split(df["text"], df["labe
 
 vectorizer = TfidfVectorizer()
 X_train = vectorizer.fit_transform(X_train_raw)
+print(vectorizer.vocabulary_)
 
 X_test = vectorizer.transform(X_test_raw)
 
